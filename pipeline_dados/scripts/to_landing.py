@@ -48,13 +48,23 @@ if __name__ == "__main__" :
     engine = create_conn()
     df = pd.read_csv(file_path)
     print(df.info())
-    df.rename(columns={'ITEM CODE': 'ITEM_CODE', 
-                       'ITEM DESCRIPTION': 'ITEM_DESCRIPTION',
-                       'ITEM TYPE': 'ITEM_TYPE',
-                       'RETAIL SALES': 'RETAIL_SALES',
-                       'RETAIL TRANSFERS': 'RETAIL_TRANSFERS',
-                       'WAREHOUSE SALES': 'WAREHOUSE_SALES'}, inplace=True)
+    #df.rename(columns={'ITEM CODE': 'ITEM_CODE', 
+    #                   'ITEM DESCRIPTION': 'ITEM_DESCRIPTION',
+    #                   'ITEM TYPE': 'ITEM_TYPE',
+    #                   'RETAIL SALES': 'RETAIL_SALES',
+    #                   'RETAIL TRANSFERS': 'RETAIL_TRANSFERS',
+    #                   'WAREHOUSE SALES': 'WAREHOUSE_SALES'}, inplace=True)
     print(df.info())
     print(df.head())
+    #print(df[['SUPPLIER']])
+    
+    
+    #date_df = df[['YEAR', 'MONTH']]
+    #date_df = date_df.drop_duplicates()
+    #date_df = date_df.reset_index(drop=True)
+    #date_df = date_df.reset_index(names ="DATE_ID")
+    #date_df["DATE_ID"] += 1
+    #print(date_df)
+    
     load_table_landing(df, engine, "Retail_sales")
     close_conn(engine)
