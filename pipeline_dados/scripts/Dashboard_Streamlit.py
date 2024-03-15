@@ -14,7 +14,7 @@ def formata_numero(valor, prefixo = ''):
     return f'{prefixo} {valor:.2f} milhoes'
 
 st.title('DASHBOARD DE VENDAS :shopping_trolley:')
-##start streamlit run pipeline_dados/scripts/Dashboard.py
+##start streamlit run pipeline_dados/scripts/Dashboard_Streamlit.py
 
 url = 'https://labdados.com/produtos'
 response = requests.get(url)
