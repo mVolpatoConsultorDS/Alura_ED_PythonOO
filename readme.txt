@@ -11,4 +11,4 @@ Ativar ambiente: source venv/bin/activate
 Desactivar: deactivate 
 
 Verificar los pacotes instalados:  pip freeze
-pip freeze > requirements.txt
+pip freeze > requirements.txt 
